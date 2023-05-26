@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ScriptureProgram
 {
-    public class Word
+    class Word
     {
         public string Text { get; }
         public bool Hidden { get; private set; }
@@ -25,7 +25,7 @@ namespace ScriptureProgram
         }
     }
 
-    public class ScriptureReference
+    class ScriptureReference
     {
         public string Book { get; }
         public int Chapter { get; }
@@ -53,7 +53,7 @@ namespace ScriptureProgram
         }
     }
 
-    public class Scripture
+    class Scripture
     {
         private readonly List<Word> words;
 
@@ -116,7 +116,7 @@ namespace ScriptureProgram
         }
     }
 
-    public class Program
+    class Program
     {
         private static void ClearConsole()
         {
