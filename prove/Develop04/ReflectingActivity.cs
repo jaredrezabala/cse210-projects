@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 // {
     class ReflectingActivity:Activity
     {
-        
+        private bool activityRunning;
         public void DisplayMessage()
         {
             Console.WriteLine("Welcome to the Reflecting Activity");
@@ -16,14 +16,17 @@ using System.Threading.Tasks;
             Console.WriteLine("This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life");
             Console.WriteLine("");
             //ask question how long the user want the activity to go for
-            Console.WriteLine("Get ready");
+            // Console.WriteLine("Get ready");
             //run spinner
             Console.WriteLine("Enter the duration in seconds for running the code:");
             if (int.TryParse(Console.ReadLine(), out int duration))
             {
+                activityRunning = true;
                 DisplayRandomPrompt();
                 DisplayQuestions();
-                Thread.Sleep(duration * 1000);
+
+                // Thread.Sleep(duration * 1000);
+                activityRunning = false;
                 Console.WriteLine("You have completed another " + duration+ " seconds of the Breathing Activity.");
             }
             
