@@ -26,6 +26,7 @@ using System.Threading.Tasks;
                 DisplayQuestions();
 
                 // Thread.Sleep(duration * 1000);
+                Task.Delay(duration*1000).Wait();
                 activityRunning = false;
                 Console.WriteLine("You have completed another " + duration+ " seconds of the Breathing Activity.");
             }
