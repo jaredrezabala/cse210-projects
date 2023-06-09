@@ -15,9 +15,16 @@ using System.Threading.Tasks;
             Console.WriteLine("This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.");
 
             //add a loop to get this 2 messages going until the number of seconds that the user entered are over
-            Console.WriteLine("Breathe in..."); //add timer
-            Console.WriteLine("Now Breathe out..."); //add timer
+            Console.WriteLine("Enter the duration in seconds for running the code:");
+            if (int.TryParse(Console.ReadLine(), out int duration))
+            {
+                Thread.Sleep(duration * 1000);
+                Console.WriteLine("Breathe in..."); //add timer
+                Console.WriteLine("Now Breathe out..."); //add timer
+                Console.WriteLine("You have completed another " + duration+ " seconds of the Breathing Activity.");
 
+
+            }
             //display ending message
             //run the spinner
             //display message saying "You have completed another 30 seconds of the Breathing Activity." the seconds will depend of the number of seconds the user entered in the first place"
