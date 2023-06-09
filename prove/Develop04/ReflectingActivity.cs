@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 // {
     class ReflectingActivity:Activity
     {
+        ReflectingActivity inheritance = new ReflectingActivity();
         public void DisplayMessage()
         {
             Console.WriteLine("Welcome to the Reflecting Activity");
@@ -20,26 +21,39 @@ using System.Threading.Tasks;
             Console.WriteLine("Enter the duration in seconds for running the code:");
             if (int.TryParse(Console.ReadLine(), out int duration))
             {
+                DisplayRandomPrompt();
+                DisplayQuestions();
                 Thread.Sleep(duration * 1000);
+                Console.WriteLine("You have completed another " + duration+ " seconds of the Breathing Activity.");
             }
-            Console.ReadLine();
+            
 
         }
         public void DisplayRandomPrompt()
         {
+            Console.WriteLine("Consider the following prompt:"); 
+            Console.WriteLine();
             List<string> prompts = new List<string>();
             prompts.Add("Think of a time when you stood up for someone else.");
             prompts.Add("Think of a time when you did something really difficult.");
             prompts.Add("Think of a time when you helped someone in need.");
             prompts.Add("Think of a time when you did something truly selfless.");
             //use random method to choose one and display it 
+            Random random = new Random();
+            int index = random.Next(0, prompts.Count);
+            Console.WriteLine(prompts[index]);
+            Console.WriteLine();
             Console.WriteLine("When you have something in mind, press enter to continue");
+            Console.ReadLine();
             //add an input enter an when the user press it then show the next part
 
 
         }
         public void DisplayQuestions()
         {
+            Console.WriteLine("Now ponder on each of the following questions as they related to this experience");
+            inheritance.Timer();
+            Console.WriteLine();
             List<string> questions = new List<string>();
             questions.Add("Why was this experience meaningful to you?");
             questions.Add("Have you ever done anything like this before?");
@@ -51,6 +65,13 @@ using System.Threading.Tasks;
             questions.Add("What did you learn about yourself through this experience?");
             questions.Add("How can you keep this experience in mind in the future?");
             //after each question I need to run the spinner for several seconds
+            
+            foreach (string item in questions)
+            {
+                Console.WriteLine(item);
+                inheritance.Spiner();
+            }
+
 
         }
 
