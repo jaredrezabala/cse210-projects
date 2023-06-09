@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 // {
     class ReflectingActivity:Activity
     {
-        ReflectingActivity inheritance2 = new ReflectingActivity();
+        
         public void DisplayMessage()
         {
             Console.WriteLine("Welcome to the Reflecting Activity");
@@ -52,7 +52,7 @@ using System.Threading.Tasks;
         public void DisplayQuestions()
         {
             Console.WriteLine("Now ponder on each of the following questions as they related to this experience");
-            inheritance2.Timer();
+            Timer();
             Console.WriteLine();
             List<string> questions = new List<string>();
             questions.Add("Why was this experience meaningful to you?");
@@ -69,7 +69,7 @@ using System.Threading.Tasks;
             foreach (string item in questions)
             {
                 Console.WriteLine(item);
-                inheritance2.Spiner();
+                Spiner();
             }
 
 
