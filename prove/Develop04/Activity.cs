@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace mindfulness
-{
+// namespace mindfulness
+// {
     class Activity
     {
         public void Spiner()
@@ -46,4 +46,4 @@ namespace mindfulness
             Console.WriteLine("Thanks for participating in this activity, you did it a great job!");
         }
     }
-}
+// }

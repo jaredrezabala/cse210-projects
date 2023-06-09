@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace mindfulness
-{
+// namespace mindfulness
+// {
     class ReflectingActivity:Activity
     {
         public void DisplayMessage()
@@ -52,4 +52,4 @@ namespace mindfulness
         //Display Menu Again
 
     }
-}
+// }
