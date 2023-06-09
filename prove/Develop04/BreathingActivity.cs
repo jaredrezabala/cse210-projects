@@ -22,9 +22,8 @@ using System.Threading.Tasks;
                 Console.WriteLine("Breathe in..."); //add timer
                 Console.WriteLine("Now Breathe out..."); //add timer
                 Console.WriteLine("You have completed another " + duration+ " seconds of the Breathing Activity.");
-
-
             }
+            Console.ReadLine();
             //display ending message
             //run the spinner
             //display message saying "You have completed another 30 seconds of the Breathing Activity." the seconds will depend of the number of seconds the user entered in the first place"
