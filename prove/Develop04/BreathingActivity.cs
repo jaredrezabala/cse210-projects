@@ -9,6 +9,7 @@ using System.Threading.Tasks;
     class BreathingActivity: Activity
     {
         public void DisplayMessage()
+
         {
             Console.WriteLine("Welcome to the breathing activity");
             Console.WriteLine();
@@ -18,10 +19,17 @@ using System.Threading.Tasks;
             Console.WriteLine("Enter the duration in seconds for running the code:");
             if (int.TryParse(Console.ReadLine(), out int duration))
             {
+                BreathingActivity inheritance = new BreathingActivity();
+                inheritance.Spiner();
+                Console.WriteLine("Breathe in..."); 
+                inheritance.Timer();//add timer
+                Console.WriteLine("Now Breathe out..."); 
+                inheritance.Timer();//add timer
                 Thread.Sleep(duration * 1000);
-                Console.WriteLine("Breathe in..."); //add timer
-                Console.WriteLine("Now Breathe out..."); //add timer
+                Console.WriteLine();
                 Console.WriteLine("You have completed another " + duration+ " seconds of the Breathing Activity.");
+                Console.WriteLine();
+                inheritance.DiplayEndingMessage();
             }
             Console.ReadLine();
             //display ending message
