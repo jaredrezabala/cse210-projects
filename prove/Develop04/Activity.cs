@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 // namespace mindfulness
 // {
@@ -36,11 +37,12 @@ using System.Threading.Tasks;
                 Console.Write("\b \b");
             }
         }
-        public int DurationOfActivity(int a)
-        {
-            Console.WriteLine("How long, in seconds, would you like for your session?");
-            return a;
-        }
+        // public void DurationOfActivity()
+        // {
+        //     Console.WriteLine("How long, in seconds, would you like for your session?");
+        //     string input = Console.ReadLine();
+        //     Timer timer = new Timer(StopCodeExecution, null, input *1000, Timeout.Infinite);
+        // }
         public void DiplayEndingMessage()
         {
             Console.WriteLine("Thanks for participating in this activity, you did it a great job!");
