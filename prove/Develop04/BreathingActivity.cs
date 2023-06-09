@@ -31,7 +31,7 @@ using System.Threading.Tasks;
                 Console.WriteLine();
                 inheritance.DiplayEndingMessage();
             }
-            Console.ReadLine();
+            // Console.ReadLine();
             //display ending message
             //run the spinner
             //display message saying "You have completed another 30 seconds of the Breathing Activity." the seconds will depend of the number of seconds the user entered in the first place"

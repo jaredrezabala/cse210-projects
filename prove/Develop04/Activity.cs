@@ -35,7 +35,7 @@ using System.Threading;
             {
                 Console.WriteLine(i);
                 Thread.Sleep(1000);
-                Console.Write(i);
+                Console.Write("\b \b");
             }
         }
         // public void DurationOfActivity()

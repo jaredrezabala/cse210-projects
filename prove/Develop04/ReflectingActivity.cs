@@ -17,6 +17,12 @@ using System.Threading.Tasks;
             //ask question how long the user want the activity to go for
             Console.WriteLine("Get ready");
             //run spinner
+            Console.WriteLine("Enter the duration in seconds for running the code:");
+            if (int.TryParse(Console.ReadLine(), out int duration))
+            {
+                Thread.Sleep(duration * 1000);
+            }
+            Console.ReadLine();
 
         }
         public void DisplayRandomPrompt()
