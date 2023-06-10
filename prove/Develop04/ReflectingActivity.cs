@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-// namespace mindfulness
-// {
+
     class ReflectingActivity:Activity
     {
-        // private bool activityRunning;
+        
         public void DisplayMessage()
         {
             Console.WriteLine();
@@ -16,21 +15,14 @@ using System.Threading.Tasks;
             Console.WriteLine("");
             Console.WriteLine("This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life");
             Console.WriteLine("");
-            //ask question how long the user want the activity to go for
-            // Console.WriteLine("Get ready");
-            //run spinner
+        
             Console.WriteLine("Enter the duration in seconds for running the code:");
             if (int.TryParse(Console.ReadLine(), out int duration))
             {
                 Console.WriteLine("Get ready...");
-                Spiner();
-                // activityRunning = true;
+                Spiner();  
                 DisplayRandomPrompt();
                 DisplayQuestions(duration);
-
-                // Thread.Sleep(duration * 1000);
-                // Task.Delay(duration*1000).Wait();
-                // activityRunning = false;
                 Console.WriteLine();
                 DiplayEndingMessage();
                 Spiner();
@@ -57,7 +49,7 @@ using System.Threading.Tasks;
             Console.WriteLine();
             Console.WriteLine("When you have something in mind, press enter to continue");
             Console.ReadLine();
-            //add an input enter an when the user press it then show the next part
+            
 
 
         }
@@ -84,7 +76,7 @@ using System.Threading.Tasks;
                 {
                     if(DateTime.Now - startTime > TimeSpan.FromSeconds(duration))
                         break;
-                        
+
                     Console.WriteLine(item);
                     Spiner();
 
@@ -93,8 +85,6 @@ using System.Threading.Tasks;
             }
         }
 
-        //This activity should end with the ending msg and with this msg "You have completed another x seconds of the Reflecting Activity " 
-        //Display Menu Again
-
+        
     }
-// }
+

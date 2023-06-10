@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-// namespace mindfulness
-// {
+
     class ListingActivity:Activity
     {
         public void DisplayMessage()
@@ -15,9 +14,6 @@ using System.Threading.Tasks;
             Console.WriteLine();
             Console.WriteLine("This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area");
             Console.WriteLine();
-            //Display question of how many seconds the user wants the setion to be
-            //Display Get ready... 
-            //run spinner
             Console.WriteLine("Enter the duration in seconds for running the code:");
             if (int.TryParse(Console.ReadLine(), out int duration))
             {
@@ -42,14 +38,11 @@ using System.Threading.Tasks;
             prompts.Add("Who are people that you have helped this week?");
             prompts.Add("When have you felt the Holy Ghost this month?");
             prompts.Add("Who are some of your personal heroes?");
-            //make so that it is choose only one 
-            //after the ramdonm prompt is selected run the countdown
             Random random = new Random();
             int randomNumber = random.Next(0, prompts.Count);
             Console.WriteLine(prompts[randomNumber]);
             Console.WriteLine();
             Console.WriteLine("You may begin in:"); 
-            //number countdown
             Timer();
             Console.WriteLine("Start typing and press enter after each response");
             //make a list of responses
@@ -64,10 +57,7 @@ using System.Threading.Tasks;
                 Console.WriteLine("You listed "+responses.Count+" items");
                 Console.WriteLine();
 
-            //let the user list as many experiences as posible in a different line until the time is over
-            //display ending msg with the set msg "You have completed another x seconds of the Listing Activity
-            //run spinner
-            //go back to menu
+           
         }
     }
-// }
+
