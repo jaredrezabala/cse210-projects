@@ -26,6 +26,7 @@ using System.Threading.Tasks;
                 ListItems(duration);
                 Console.WriteLine();
                 DiplayEndingMessage();
+                Spiner();
                 Console.WriteLine();
                 Console.WriteLine("You have completed another " + duration+ " seconds of the Listing Activity.");
                 Spiner();

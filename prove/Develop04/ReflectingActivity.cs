@@ -31,7 +31,12 @@ using System.Threading.Tasks;
                 // Thread.Sleep(duration * 1000);
                 // Task.Delay(duration*1000).Wait();
                 // activityRunning = false;
+                Console.WriteLine();
+                DiplayEndingMessage();
+                Spiner();
+                Console.WriteLine();
                 Console.WriteLine("You have completed another " + duration+ " seconds of the Reflecting Activity.");
+                Spiner();
             }
             
 
@@ -77,18 +82,15 @@ using System.Threading.Tasks;
             {
                 foreach (string item in questions)
                 {
+                    if(DateTime.Now - startTime > TimeSpan.FromSeconds(duration))
+                        break;
+                        
                     Console.WriteLine(item);
                     Spiner();
 
                 }
                        
             }
-          
-             
-                
-
-
-
         }
 
         //This activity should end with the ending msg and with this msg "You have completed another x seconds of the Reflecting Activity " 

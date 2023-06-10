@@ -36,6 +36,7 @@ using System.Threading.Tasks;
                 // Thread.Sleep(duration * 1000);
                 Console.WriteLine();
                 DiplayEndingMessage();
+                Spiner();
                 Console.WriteLine();
                 Console.WriteLine("You have completed another " + duration+ " seconds of the Breathing Activity.");
                 Console.WriteLine();
