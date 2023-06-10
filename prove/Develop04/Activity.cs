@@ -26,8 +26,7 @@ using System.Threading;
             {
                 Console.WriteLine(s);
                 Thread.Sleep(1000);
-                if (Console.CursorLeft > 0)
-                    Console.Write("\b \b");
+                Console.Write("\b \b");
             }
         }
         public void Timer()

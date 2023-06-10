@@ -73,9 +73,15 @@ using System.Threading.Tasks;
             foreach (string item in questions)
             {
                 if (!activityRunning)
+                {
+                    Console.WriteLine(item);
+                    Spiner();
+                } 
+                else
+                {
                     break;
-                Console.WriteLine(item);
-                Spiner();
+                }                 
+                
             }
 
 
