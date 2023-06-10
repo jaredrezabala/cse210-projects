@@ -50,7 +50,7 @@ using System.Threading.Tasks;
             //make a list of responses
             List<string> responses = new List<string>();
             DateTime startTime = DateTime.Now;
-            while (DateTime.Now - startTime >= TimeSpan.FromSeconds(duration))
+            while (DateTime.Now - startTime <= TimeSpan.FromSeconds(duration))
             {
                 string response = Console.ReadLine();
                 responses.Add(response);
