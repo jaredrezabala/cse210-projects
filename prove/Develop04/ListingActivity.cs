@@ -23,8 +23,11 @@ using System.Threading.Tasks;
             {
                 Spiner();
                 ListItems(duration);
+                Console.WriteLine();
                 DiplayEndingMessage();
+                Console.WriteLine();
                 Console.WriteLine("You have completed another " + duration+ " seconds of the Breathing Activity.");
+                Spiner();
             }
         }
         public void ListItems(int duration) 
@@ -54,6 +57,9 @@ using System.Threading.Tasks;
             {
                 string response = Console.ReadLine();
                 responses.Add(response);
+                Console.WriteLine();
+                Console.WriteLine("You listed "+responses.Count+" items");
+                Console.WriteLine();
             
             }
 

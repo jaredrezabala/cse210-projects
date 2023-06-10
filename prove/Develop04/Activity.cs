@@ -24,7 +24,7 @@ using System.Threading;
 
             foreach (string s in animationStrings)
             {
-                Console.WriteLine(s);
+                Console.Write(s);
                 Thread.Sleep(1000);
                 Console.Write("\b \b");
             }
@@ -33,7 +33,7 @@ using System.Threading;
         {
             for (int i = 5; i > 0; i--)
             {
-                Console.WriteLine(i);
+                Console.Write(i);
                 Thread.Sleep(1000);
                 Console.Write("\b \b");
             }
