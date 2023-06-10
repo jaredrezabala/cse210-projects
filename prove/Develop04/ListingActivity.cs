@@ -10,7 +10,7 @@ using System.Threading.Tasks;
     {
         public void DisplayMessage()
         {
-           
+            Console.WriteLine();
             Console.WriteLine("Welcome to the Listing Activity");
             Console.WriteLine();
             Console.WriteLine("This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area");
@@ -26,7 +26,7 @@ using System.Threading.Tasks;
                 Console.WriteLine();
                 DiplayEndingMessage();
                 Console.WriteLine();
-                Console.WriteLine("You have completed another " + duration+ " seconds of the Breathing Activity.");
+                Console.WriteLine("You have completed another " + duration+ " seconds of the Listing Activity.");
                 Spiner();
             }
         }
@@ -57,11 +57,10 @@ using System.Threading.Tasks;
             {
                 string response = Console.ReadLine();
                 responses.Add(response);
+            }
                 Console.WriteLine();
                 Console.WriteLine("You listed "+responses.Count+" items");
                 Console.WriteLine();
-            
-            }
 
             //let the user list as many experiences as posible in a different line until the time is over
             //display ending msg with the set msg "You have completed another x seconds of the Listing Activity

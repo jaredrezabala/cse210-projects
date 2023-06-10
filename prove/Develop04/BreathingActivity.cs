@@ -11,6 +11,7 @@ using System.Threading.Tasks;
         public void DisplayMessage()
 
         {
+            Console.WriteLine();
             Console.WriteLine("Welcome to the breathing activity");
             Console.WriteLine();
             Console.WriteLine("This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.");
@@ -19,17 +20,26 @@ using System.Threading.Tasks;
             Console.WriteLine("Enter the duration in seconds for running the code:");
             if (int.TryParse(Console.ReadLine(), out int duration))
             {
-                BreathingActivity inheritance = new BreathingActivity();
-                inheritance.Spiner();
-                Console.WriteLine("Breathe in..."); 
-                inheritance.Timer();//add timer
-                Console.WriteLine("Now Breathe out..."); 
-                inheritance.Timer();//add timer
-                Thread.Sleep(duration * 1000);
+                // BreathingActivity inheritance = new BreathingActivity();
+                Spiner();
+                DateTime startTime = DateTime.Now;
+                while (DateTime.Now - startTime <= TimeSpan.FromSeconds(duration))
+                {
+                    Console.WriteLine("Breathe in..."); 
+                    Timer();//add timer
+                    Console.WriteLine("Now Breathe out..."); 
+                    Timer();//add timer
+
+                }
+                
+                // Thread.Sleep(duration * 1000);
+                Console.WriteLine();
+                DiplayEndingMessage();
                 Console.WriteLine();
                 Console.WriteLine("You have completed another " + duration+ " seconds of the Breathing Activity.");
                 Console.WriteLine();
-                inheritance.DiplayEndingMessage();
+                Spiner();
+                
             }
             // Console.ReadLine();
             //display ending message

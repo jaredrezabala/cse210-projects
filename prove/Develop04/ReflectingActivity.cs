@@ -11,6 +11,7 @@ using System.Threading.Tasks;
         private bool activityRunning;
         public void DisplayMessage()
         {
+            Console.WriteLine();
             Console.WriteLine("Welcome to the Reflecting Activity");
             Console.WriteLine("");
             Console.WriteLine("This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life");
@@ -28,7 +29,7 @@ using System.Threading.Tasks;
                 // Thread.Sleep(duration * 1000);
                 Task.Delay(duration*1000).Wait();
                 activityRunning = false;
-                Console.WriteLine("You have completed another " + duration+ " seconds of the Breathing Activity.");
+                Console.WriteLine("You have completed another " + duration+ " seconds of the Reflecting Activity.");
             }
             
 
