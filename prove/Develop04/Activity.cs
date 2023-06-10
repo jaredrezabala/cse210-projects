@@ -11,7 +11,7 @@ using System.Threading;
     {
         public void Spiner()
         { 
-            Console.WriteLine("Get ready...");
+            // Console.WriteLine("Get ready...");
                 List<string> animationStrings = new List<string>();
                 animationStrings.Add("|");
                 animationStrings.Add("/");

@@ -21,6 +21,7 @@ using System.Threading.Tasks;
             if (int.TryParse(Console.ReadLine(), out int duration))
             {
                 // BreathingActivity inheritance = new BreathingActivity();
+                Console.WriteLine("Get ready...");
                 Spiner();
                 DateTime startTime = DateTime.Now;
                 while (DateTime.Now - startTime <= TimeSpan.FromSeconds(duration))

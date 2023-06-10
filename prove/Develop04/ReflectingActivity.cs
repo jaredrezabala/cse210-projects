@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 // {
     class ReflectingActivity:Activity
     {
-        private bool activityRunning;
+        // private bool activityRunning;
         public void DisplayMessage()
         {
             Console.WriteLine();
@@ -22,13 +22,15 @@ using System.Threading.Tasks;
             Console.WriteLine("Enter the duration in seconds for running the code:");
             if (int.TryParse(Console.ReadLine(), out int duration))
             {
-                activityRunning = true;
+                Console.WriteLine("Get ready...");
+                Spiner();
+                // activityRunning = true;
                 DisplayRandomPrompt();
-                DisplayQuestions();
+                DisplayQuestions(duration);
 
                 // Thread.Sleep(duration * 1000);
-                Task.Delay(duration*1000).Wait();
-                activityRunning = false;
+                // Task.Delay(duration*1000).Wait();
+                // activityRunning = false;
                 Console.WriteLine("You have completed another " + duration+ " seconds of the Reflecting Activity.");
             }
             
@@ -54,7 +56,7 @@ using System.Threading.Tasks;
 
 
         }
-        public void DisplayQuestions()
+        public void DisplayQuestions(int duration)
         {
             Console.WriteLine("Now ponder on each of the following questions as they related to this experience");
             Timer();
@@ -70,20 +72,21 @@ using System.Threading.Tasks;
             questions.Add("What did you learn about yourself through this experience?");
             questions.Add("How can you keep this experience in mind in the future?");
             //after each question I need to run the spinner for several seconds
-            
-            foreach (string item in questions)
+            DateTime startTime = DateTime.Now;
+            while (DateTime.Now - startTime <= TimeSpan.FromSeconds(duration))
             {
-                if (!activityRunning)
+                foreach (string item in questions)
                 {
                     Console.WriteLine(item);
                     Spiner();
-                } 
-                else
-                {
-                    break;
-                }                 
-                
+
+                }
+                       
             }
+          
+             
+                
+
 
 
         }

@@ -21,6 +21,7 @@ using System.Threading.Tasks;
             Console.WriteLine("Enter the duration in seconds for running the code:");
             if (int.TryParse(Console.ReadLine(), out int duration))
             {
+                Console.WriteLine("Get ready...");
                 Spiner();
                 ListItems(duration);
                 Console.WriteLine();
