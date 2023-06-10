@@ -15,8 +15,8 @@ using System.Threading.Tasks;
             Console.WriteLine();
             Console.WriteLine("This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.");
 
-            
-            Console.WriteLine("Enter the duration in seconds for running the code:");
+            Console.WriteLine();
+            Console.WriteLine("How long, in seconds, would you like for your session?");
             if (int.TryParse(Console.ReadLine(), out int duration))
             {
                 Console.WriteLine("Get ready...");

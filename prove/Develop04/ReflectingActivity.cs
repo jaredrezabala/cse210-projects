@@ -16,7 +16,7 @@ using System.Threading.Tasks;
             Console.WriteLine("This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life");
             Console.WriteLine("");
         
-            Console.WriteLine("Enter the duration in seconds for running the code:");
+            Console.WriteLine("How long, in seconds, would you like for your session?");
             if (int.TryParse(Console.ReadLine(), out int duration))
             {
                 Console.WriteLine("Get ready...");
@@ -55,7 +55,9 @@ using System.Threading.Tasks;
         }
         public void DisplayQuestions(int duration)
         {
-            Console.WriteLine("Now ponder on each of the following questions as they related to this experience");
+            Console.WriteLine("Now ponder on each of the following questions as they are related to this experience");
+            Console.WriteLine();
+            Console.WriteLine("You may begin in:"); 
             Timer();
             Console.WriteLine();
             List<string> questions = new List<string>();
