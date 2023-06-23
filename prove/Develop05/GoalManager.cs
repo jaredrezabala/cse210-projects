@@ -1,8 +1,9 @@
 class GoalManager:Goal
 {
-    public void GetList()
-    {
-        EnterGoalDetails();
-    }
+    // public void GetList()
+    // {
+    //     List<string[]> goalList = EnterGoalDetails();
+    //     Console.WriteLine(goalList);
+    // }
     
 }

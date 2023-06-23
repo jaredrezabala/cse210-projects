@@ -43,6 +43,12 @@ class Goal
                 {
                     EnterGoalDetails();
                 }
+            else if(choice == "2")
+            {
+                List<string[]> goalList = EnterGoalDetails();
+                Console.WriteLine(goalList);
+
+            }
             
             }
             else if(choice == "6")
@@ -71,6 +77,9 @@ class Goal
         Console.WriteLine("What is the amount of points associated with this goal?");
         // numberOfPointsPerGoal = Console.ReadLine();
         goalInputs[2] = Console.ReadLine();
+
+        goalList.Add(goalInputs);
+
         return goalList;
     }
     // public void RecordEvent()
