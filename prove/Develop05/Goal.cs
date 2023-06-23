@@ -1,6 +1,7 @@
 using System;
 class Goal
 {
+    List<string[]> goalList = new List<string[]>();
 
     public void DisplayScore()
     {
@@ -47,11 +48,12 @@ class Goal
             }
             else if(choice == "2")
             {
-                List<string> newList = new List<string>();
-                foreach (string[] goalInputs in EnterGoalDetails())
+                foreach (string[] goalInputs in goalList)
                 {
-                    foreach(string item in goalInputs)
-                    Console.WriteLine(item);
+                    foreach (string item in goalInputs)
+                        {
+                            Console.WriteLine(item);
+                        }
                 }
             }
             
@@ -64,9 +66,9 @@ class Goal
             }
         }
     }
-    public List<string[]> EnterGoalDetails()
+    public void EnterGoalDetails()
     {
-        List<string[]> goalList = new List<string[]>();
+        // List<string[]> goalList = new List<string[]>();
         // Goal goal = new Goal();
         // string goalName;
         // string description;
@@ -85,7 +87,7 @@ class Goal
 
         goalList.Add(goalInputs);
 
-        return goalList;
+        // return goalList;
     }
     // public void RecordEvent()
     // {
