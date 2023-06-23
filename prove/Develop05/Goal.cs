@@ -1,5 +1,6 @@
 class Goal
 {
+
     public void DisplayScore()
     {
         Console.WriteLine("You have x points");
@@ -40,6 +41,11 @@ class Goal
                 EnterGoalDetails();
             }
          
+        }
+        else if(choice == "6")
+        {
+            Console.WriteLine("Goobye");
+
         }
     }
     public List<string[]> EnterGoalDetails()
