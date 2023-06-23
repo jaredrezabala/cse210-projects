@@ -87,21 +87,21 @@ class Program
                                 goals.AddGoal(clGoal);
                                 goalInput = 5;
                                 break;
+                            // case 4:
+                            //     // Negative Goal
+                            //     Console.WriteLine("What is the name of your goal?  ");
+                            //     name = Console.ReadLine();
+                            //     name = textInfo.ToTitleCase(name);
+                            //     Console.WriteLine("What is a short description of your goal?  ");
+                            //     description = Console.ReadLine();
+                            //     description = textInfo.ToTitleCase(description);
+                            //     Console.Write("How many points should be subtracted for not meeting this goal?  ");
+                            //     points = int.Parse(Console.ReadLine());
+                            //     NegativeGoal nGoal = new NegativeGoal("Negative Goal:", name, description, points);
+                            //     goals.AddGoal(nGoal);
+                            //     goalInput = 5;
+                            //     break;
                             case 4:
-                                // Negative Goal
-                                Console.WriteLine("What is the name of your goal?  ");
-                                name = Console.ReadLine();
-                                name = textInfo.ToTitleCase(name);
-                                Console.WriteLine("What is a short description of your goal?  ");
-                                description = Console.ReadLine();
-                                description = textInfo.ToTitleCase(description);
-                                Console.Write("How many points should be subtracted for not meeting this goal?  ");
-                                points = int.Parse(Console.ReadLine());
-                                NegativeGoal nGoal = new NegativeGoal("Negative Goal:", name, description, points);
-                                goals.AddGoal(nGoal);
-                                goalInput = 5;
-                                break;
-                            case 5:
                                 // Exit
                                 break;
                             default:
