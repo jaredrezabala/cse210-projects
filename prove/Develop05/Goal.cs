@@ -47,8 +47,8 @@ class Goal
             }
             else if(choice == "2")
             {
-                List<string[]> goalList = EnterGoalDetails();
-                foreach (string[] goalInputs in goalList)
+                List<string> newList = new List<string>();
+                foreach (string[] goalInputs in EnterGoalDetails())
                 {
                     foreach(string item in goalInputs)
                     Console.WriteLine(item);
