@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 class Goal
 {
     List<string[]> goalList = new List<string[]>();
@@ -52,12 +53,21 @@ class Goal
                 {
                     foreach (string item in goalInputs)
                         {
-                            Console.WriteLine(item);
+                            Console.Write("[]"+item[1]);
                         }
                 }
             }
-            
-            
+            else if(choice == "3")
+            {
+                GoalManager();
+
+            }
+            else if(choice == "4"){
+                
+            }
+            else if(choice == "5"){
+                
+            }
             else if(choice == "6")
             {
                 Console.WriteLine("Goobye");
@@ -68,34 +78,32 @@ class Goal
     }
     public void EnterGoalDetails()
     {
-        // List<string[]> goalList = new List<string[]>();
-        // Goal goal = new Goal();
-        // string goalName;
-        // string description;
-        // string numberOfPointsPerGoal;
         string[] goalInputs = new string[3];
-
         Console.WriteLine("What is the name of your goal?");
-        // goalName = Console.ReadLine();
         goalInputs[0] = Console.ReadLine();
         Console.WriteLine("What is a short description of it?");
-        // description = Console.ReadLine();
         goalInputs[1] = Console.ReadLine();
         Console.WriteLine("What is the amount of points associated with this goal?");
-        // numberOfPointsPerGoal = Console.ReadLine();
         goalInputs[2] = Console.ReadLine();
 
         goalList.Add(goalInputs);
 
-        // return goalList;
+     
     }
-    // public void RecordEvent()
-    // {
-    //     string Event = Console.ReadLine("Please enter your event:");
+    public void GoalManager()
+    {
+        string fileName = "";
+        Console.WriteLine("What is the filename for the goal file?");
+        fileName = Console.ReadLine();
+        using(StreamWriter writer = new StreamWriter(fileName))
+        {
+            foreach(string[] goalInputs in goalList)
+            {
+                writer.Write(goalInputs[0]+","+goalInputs[1]+","+ goalInputs[2]);
+            }
 
-    // }
-    // public bool isComplete(){
+        }
 
-    //     return true;
-    // }
+    }
+ 
 }
