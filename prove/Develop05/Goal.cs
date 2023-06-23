@@ -43,6 +43,7 @@ class Goal
                 {
                     EnterGoalDetails();
                 }
+            }
             else if(choice == "2")
             {
                 List<string[]> goalList = EnterGoalDetails();
@@ -50,7 +51,7 @@ class Goal
 
             }
             
-            }
+            
             else if(choice == "6")
             {
                 Console.WriteLine("Goobye");
