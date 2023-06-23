@@ -53,7 +53,7 @@ class Goal
                 {
                     foreach (string item in goalInputs)
                         {
-                            Console.Write("[]"+item[1]);
+                            Console.Write(item);
                         }
                 }
             }
