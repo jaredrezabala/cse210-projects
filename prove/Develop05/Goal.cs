@@ -1,3 +1,4 @@
+using System;
 class Goal
 {
 
@@ -47,8 +48,11 @@ class Goal
             else if(choice == "2")
             {
                 List<string[]> goalList = EnterGoalDetails();
-                Console.WriteLine(goalList);
-
+                foreach (string[] goalInputs in goalList)
+                {
+                    foreach(string item in goalInputs)
+                    Console.WriteLine(item);
+                }
             }
             
             
