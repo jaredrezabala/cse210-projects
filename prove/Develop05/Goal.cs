@@ -41,20 +41,26 @@ class Goal
             }
          
         }
-
     }
-    public void EnterGoalDetails()
+    public List<string[]> EnterGoalDetails()
     {
-        string goalName;
-        string description;
-        string numberOfPointsPerGoal;
+        List<string[]> goalList = new List<string[]>();
+        // Goal goal = new Goal();
+        // string goalName;
+        // string description;
+        // string numberOfPointsPerGoal;
+        string[] goalInputs = new string[3];
 
         Console.WriteLine("What is the name of your goal?");
-        goalName = Console.ReadLine();
-        Console.WriteLine("What is a short description of it");
-        description = Console.ReadLine();
+        // goalName = Console.ReadLine();
+        goalInputs[0] = Console.ReadLine();
+        Console.WriteLine("What is a short description of it?");
+        // description = Console.ReadLine();
+        goalInputs[1] = Console.ReadLine();
         Console.WriteLine("What is the amount of points associated with this goal?");
-        numberOfPointsPerGoal = Console.ReadLine();
+        // numberOfPointsPerGoal = Console.ReadLine();
+        goalInputs[2] = Console.ReadLine();
+        return goalList;
     }
     // public void RecordEvent()
     // {
