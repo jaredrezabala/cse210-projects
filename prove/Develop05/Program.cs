@@ -7,6 +7,7 @@ class Program
     static void Main(string[] args)
     {
         // Use to convert text to title case
+        //borrar esto
         TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
 
         GoalManagement goals = new GoalManagement();
