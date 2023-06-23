@@ -9,43 +9,48 @@ class Goal
     }
     public void DisplayMenu()
     {
-        Console.WriteLine("Menu Options:");
-        Console.WriteLine("1) Create New Goal");
-        Console.WriteLine("2) List Goals");
-        Console.WriteLine("3) Save Goals");
-        Console.WriteLine("4) Load Goals");
-        Console.WriteLine("5) Record Event");
-        Console.WriteLine("6) Quit");
-        Console.WriteLine("");
-        Console.WriteLine("Select a choice for the menu:");
-        string choice = Console.ReadLine();
-
-        if(choice == "1")
+        bool runProgram = false;
+        while(runProgram != true)
         {
-            Console.WriteLine("The types of Goals are:"); 
-            Console.WriteLine("1. Simple Goal"); 
-            Console.WriteLine("2. Eternal Goal");
-            Console.WriteLine("3. Checklist Goal");
-            Console.Write("Which type of goal would you like to create?");
-            string input = Console.ReadLine();
-            if(input == "1")
-            {
-                EnterGoalDetails();
-            }
-            else if(input == "2")
-            {
-                EnterGoalDetails();
-            }
-            else if (input == "3")
-            {
-                EnterGoalDetails();
-            }
-         
-        }
-        else if(choice == "6")
-        {
-            Console.WriteLine("Goobye");
+            Console.WriteLine("Menu Options:");
+            Console.WriteLine("1) Create New Goal");
+            Console.WriteLine("2) List Goals");
+            Console.WriteLine("3) Save Goals");
+            Console.WriteLine("4) Load Goals");
+            Console.WriteLine("5) Record Event");
+            Console.WriteLine("6) Quit");
+            Console.WriteLine("");
+            Console.WriteLine("Select a choice for the menu:");
+            string choice = Console.ReadLine();
 
+            if(choice == "1")
+            {
+                Console.WriteLine("The types of Goals are:"); 
+                Console.WriteLine("1. Simple Goal"); 
+                Console.WriteLine("2. Eternal Goal");
+                Console.WriteLine("3. Checklist Goal");
+                Console.Write("Which type of goal would you like to create?");
+                string input = Console.ReadLine();
+                if(input == "1")
+                {
+                    EnterGoalDetails();
+                }
+                else if(input == "2")
+                {
+                    EnterGoalDetails();
+                }
+                else if (input == "3")
+                {
+                    EnterGoalDetails();
+                }
+            
+            }
+            else if(choice == "6")
+            {
+                Console.WriteLine("Goobye");
+                runProgram = true;
+
+            }
         }
     }
     public List<string[]> EnterGoalDetails()
