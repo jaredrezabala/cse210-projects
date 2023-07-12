@@ -10,10 +10,10 @@ class Program
         // Create Video 1
         Video video1 = new Video
         {
-            Title = "Video 1",
-            Author = "Author 1",
-            Length = 120,
-            Comments = new List<Comment>()
+            _Title = "Video 1",
+            _Author = "Author 1",
+            _Length = 120,
+            _Comments = new List<Comment>()
         };
 
         // Add comments to Video 1
@@ -27,10 +27,10 @@ class Program
         // Create Video 2
         Video video2 = new Video
         {
-            Title = "Video 2",
-            Author = "Author 2",
-            Length = 180,
-            Comments = new List<Comment>()
+            _Title = "Video 2",
+            _Author = "Author 2",
+            _Length = 180,
+            _Comments = new List<Comment>()
         };
 
         // Add comments to Video 2
@@ -44,10 +44,10 @@ class Program
         // Create Video 3
         Video video3 = new Video
         {
-            Title = "Video 3",
-            Author = "Author 3",
-            Length = 150,
-            Comments = new List<Comment>()
+            _Title = "Video 3",
+            _Author = "Author 3",
+            _Length = 150,
+            _Comments = new List<Comment>()
         };
 
         // Add comments to Video 3
@@ -60,9 +60,9 @@ class Program
         // Iterate through the list of videos
         foreach (Video video in videos)
         {
-            Console.WriteLine("Title: " + video.Title);
-            Console.WriteLine("Author: " + video.Author);
-            Console.WriteLine("Length: " + video.Length + " seconds");
+            Console.WriteLine("Title: " + video._Title);
+            Console.WriteLine("Author: " + video._Author);
+            Console.WriteLine("Length: " + video._Length + " seconds");
             Console.WriteLine("Number of Comments: " + video.GetNumberOfComments());
 
             List<Comment> comments = video.GetComments();
@@ -70,11 +70,10 @@ class Program
 
             foreach (Comment comment in comments)
             {
-                Console.WriteLine("- Comment by " + comment.CommenterName + ": " + comment.CommentText);
+                Console.WriteLine("- Comment by " + comment._CommenterName + ": " + comment._CommentText);
             }
 
             Console.WriteLine();
         }
     }
-
 }

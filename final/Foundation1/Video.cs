@@ -2,24 +2,24 @@ using System.Collections.Generic;
 
 class Video
 {
-    public string Title { get; set; }
-    public string Author { get; set; }
-    public int Length { get; set; }
-    public List<Comment> Comments { get; set; }
+    public string _Title { get; set; }
+    public string _Author { get; set; }
+    public int _Length { get; set; }
+    public List<Comment> _Comments { get; set; }
 
     public int GetNumberOfComments()
     {
-        return Comments.Count;
+        return _Comments.Count;
     }
 
     public void AddComment(string commenterName, string commentText)
     {
         Comment newComment = new Comment(commenterName, commentText);
-        Comments.Add(newComment);
+        _Comments.Add(newComment);
     }
 
     public List<Comment> GetComments()
     {
-        return Comments;
+        return _Comments;
     }
 }
