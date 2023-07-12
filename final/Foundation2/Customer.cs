@@ -1,30 +1,30 @@
 public class Customer
 {
-    private string name;
-    private Address address;
+    private string _name;
+    private Address _address;
 
     public void SetName(string name)
     {
-        this.name = name;
+        _name = name;
     }
 
     public string GetName()
     {
-        return name;
+        return _name;
     }
 
     public void SetAddress(Address address)
     {
-        this.address = address;
+        _address = address;
     }
 
     public Address GetAddress()
     {
-        return address;
+        return _address;
     }
 
     public bool IsInUSA()
     {
-        return address.IsInUSA();
+        return _address.IsInUSA();
     }
 }

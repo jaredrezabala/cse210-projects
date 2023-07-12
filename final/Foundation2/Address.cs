@@ -1,57 +1,57 @@
 public class Address
 {
-    private string streetAddress;
-    private string city;
-    private string stateProvince;
-    private string country;
+    private string _streetAddress;
+    private string _city;
+    private string _stateProvince;
+    private string _country;
 
     public void SetStreetAddress(string streetAddress)
     {
-        this.streetAddress = streetAddress;
+        _streetAddress = streetAddress;
     }
 
     public string GetStreetAddress()
     {
-        return streetAddress;
+        return _streetAddress;
     }
 
     public void SetCity(string city)
     {
-        this.city = city;
+        _city = city;
     }
 
     public string GetCity()
     {
-        return city;
+        return _city;
     }
 
     public void SetStateProvince(string stateProvince)
     {
-        this.stateProvince = stateProvince;
+        _stateProvince = stateProvince;
     }
 
     public string GetStateProvince()
     {
-        return stateProvince;
+        return _stateProvince;
     }
 
     public void SetCountry(string country)
     {
-        this.country = country;
+        _country = country;
     }
 
     public string GetCountry()
     {
-        return country;
+        return _country;
     }
 
     public bool IsInUSA()
     {
-        return country == "USA";
+        return _country == "USA";
     }
 
     public string GetFullAddress()
     {
-        return $"{streetAddress}, {city}, {stateProvince}, {country}";
+        return $"{_streetAddress}, {_city}, {_stateProvince}, {_country}";
     }
 }

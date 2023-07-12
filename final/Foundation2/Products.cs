@@ -1,47 +1,47 @@
 public class Product
 {
-    private string name;
-    private string productId;
-    private decimal price;
-    private int quantity;
+    private string _name;
+    private string _productId;
+    private decimal _price;
+    private int _quantity;
 
     public void SetName(string name)
     {
-        this.name = name;
+        _name = name;
     }
 
     public string GetName()
     {
-        return name;
+        return _name;
     }
 
     public void SetProductId(string productId)
     {
-        this.productId = productId;
+        _productId = productId;
     }
 
     public string GetProductId()
     {
-        return productId;
+        return _productId;
     }
 
     public void SetPrice(decimal price)
     {
-        this.price = price;
+        _price = price;
     }
 
     public decimal GetPrice()
     {
-        return price;
+        return _price;
     }
 
     public void SetQuantity(int quantity)
     {
-        this.quantity = quantity;
+        _quantity = quantity;
     }
 
     public int GetQuantity()
     {
-        return quantity;
+        return _quantity;
     }
 }
