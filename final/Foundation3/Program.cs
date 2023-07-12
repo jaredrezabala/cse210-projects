@@ -22,7 +22,7 @@ public class Program
             StateProvince = "NY",
             Country = "USA"
         };
-        ((Lecture)event1).Speaker = "John Doe";
+        ((Lecture)event1).Speaker = "Jared Rezabala";
         ((Lecture)event1).Capacity = 50;
 
         // Set attributes for event2 (Reception)
