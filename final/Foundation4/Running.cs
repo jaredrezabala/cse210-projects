@@ -1,18 +1,11 @@
 public class Running : Activity
 {
     private double _distance;
-    private new int _length;
 
     public double Distance
     {
         get { return _distance; }
         set { _distance = value; }
-    }
-
-    public new int Length
-    {
-        get { return _length; }
-        set { _length = value; }
     }
 
     public override double GetDistance()

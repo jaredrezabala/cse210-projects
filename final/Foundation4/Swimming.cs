@@ -1,19 +1,12 @@
 public class Swimming : Activity
 {
     private double _distance;
-    private new int _length;
     private int _laps;
 
     public double Distance
     {
         get { return _distance; }
         set { _distance = value; }
-    }
-
-    public new int Length
-    {
-        get { return _length; }
-        set { _length = value; }
     }
 
     public int Laps
