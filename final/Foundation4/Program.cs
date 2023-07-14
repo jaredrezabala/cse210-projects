@@ -7,28 +7,27 @@ class Program
     {
         List<Activity> activities = new List<Activity>();
 
-        // Create Running activity
-        Running running = new Running();
-        running.Date = DateTime.Now;
-        running.Length = 60;
-        running.Distance = 5.0;
-        activities.Add(running);
+        // Create Running Activity
+        Running runningActivity = new Running();
+        runningActivity.Length = 30; // Set length in minutes
+        runningActivity.Distance = 5.5; // Set distance in miles
+        activities.Add(runningActivity);
 
-        // Create Cycling activity
-        Cycling cycling = new Cycling();
-        cycling.Date = DateTime.Now;
-        cycling.Length = 45;
-        cycling.Speed = 18.0;
-        activities.Add(cycling);
+        // Create Swimming Activity
+        Swimming swimmingActivity = new Swimming();
+        swimmingActivity.Length = 45; // Set length in minutes
+        swimmingActivity.Distance = 1.2; // Set distance in miles
+        swimmingActivity.Laps = 20; // Set number of laps
+        activities.Add(swimmingActivity);
 
-        // Create Swimming activity
-        Swimming swimming = new Swimming();
-        swimming.Date = DateTime.Now;
-        swimming.Length = 30;
-        swimming.Laps = 20;
-        activities.Add(swimming);
+        // Create Cycling Activity
+        Cycling cyclingActivity = new Cycling();
+        cyclingActivity.Length = 60; // Set length in minutes
+        cyclingActivity.Distance = 10.0; // Set distance in miles
+        cyclingActivity.Speed = 18.5; // Set speed in miles per hour
+        activities.Add(cyclingActivity);
 
-        // Display activity summaries
+        // Display activity details
         foreach (Activity activity in activities)
         {
             Console.WriteLine(activity.GetSummary());
